@@ -1,0 +1,802 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>מכרזי ביטחון אסיה-פסיפיק</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400&display=swap"
+    />
+    <link rel="stylesheet" href="hark.css" />
+    <style>
+      :root {
+        --page-max: 1360px;
+        --sans: "Heebo", "Assistant", "Segoe UI", "Arial Hebrew", "Noto Sans Hebrew", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+        --x-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+        --x-navy: #0b1f3a;
+        --x-navy-deep: #071629;
+        --x-head: light-dark(#0b1f3a, #16304f);
+        --x-bg: light-dark(#f2f5f9, #07121f);
+        --x-surface: light-dark(#ffffff, #0e1f35);
+        --x-surface-2: light-dark(#f6f8fb, #11243c);
+        --x-slate: light-dark(#e6ebf2, #1a2f4a);
+        --x-line: light-dark(#d6deea, #233b59);
+        --x-line-soft: light-dark(#e7ecf3, #1a3049);
+        --x-ink: light-dark(#0e1b2e, #e7eef7);
+        --x-ink-2: light-dark(#4a5a70, #9fb1c7);
+        --x-teal: light-dark(#0b7d8d, #2fd0e3);
+        --x-teal-strong: #0fb5c9;
+        --x-gold: light-dark(#8a6500, #e9c45a);
+        --x-gold-fill: #e3b341;
+        --x-red: light-dark(#c2303a, #ff6b6b);
+        --x-amber: light-dark(#a85800, #f4a23c);
+        --x-green: light-dark(#0a7550, #3ddc97);
+        --x-c-air: light-dark(#1f63c4, #5aa2ff);
+        --x-c-naval: light-dark(#0b5f8a, #3fb6e8);
+        --x-c-land: light-dark(#53701b, #9cc94a);
+        --x-c-hls: light-dark(#7339ad, #b98cf0);
+        --x-c-uav: light-dark(#b45200, #ff9f45);
+        --x-c-ew: light-dark(#007780, #2fd0e3);
+        --x-c-arms: light-dark(#a3303a, #ff7b7b);
+        --x-c-misc: light-dark(#55657a, #a5b4c8);
+        --x-fh: 72px;
+      }
+      body { background: var(--x-bg); color: var(--x-ink); }
+      .x-num { font-variant-numeric: tabular-nums; }
+
+      /* utility bar */
+      .x-util { margin-inline: calc(50% - 50vw); margin-top: -12px; background: var(--x-navy-deep); color: #c9d6e6; font: var(--type-caption); border-bottom: 1px solid rgb(255 255 255 / 0.08); }
+      .x-util__in { max-width: var(--page-max); margin: 0 auto; padding: 8px var(--gutter); display: flex; justify-content: space-between; align-items: center; gap: 6px 16px; flex-wrap: wrap; }
+      .x-util__brand { direction: ltr; display: inline-flex; align-items: center; gap: 8px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: var(--weight-medium); }
+      .x-util__brand::before { content: ""; width: 8px; height: 8px; border-radius: 2px; background: var(--x-teal-strong); box-shadow: 0 0 10px var(--x-teal-strong); }
+      .x-util__start { display: inline-flex; align-items: center; gap: 10px; }
+      .x-util__logo { display: block; height: 30px; aspect-ratio: 766 / 502; border-radius: 6px; overflow: hidden; border: 1px solid rgba(0, 200, 255, 0.35); box-shadow: 0 0 8px rgba(0, 200, 255, 0.25); flex: none; }
+      .x-util__logo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .x-util b { color: #fff; font-weight: var(--weight-medium); font-variant-numeric: tabular-nums; }
+
+      /* hero */
+      .x-hero { position: relative; isolation: isolate; overflow: hidden; margin-inline: calc(50% - 50vw); margin-top: -16px; background: var(--x-navy); color: #f2f6fb; }
+      .x-hero__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+      .x-hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(to left, rgb(7 22 41 / 0.94) 0%, rgb(11 31 58 / 0.8) 50%, rgb(11 31 58 / 0.5) 100%), linear-gradient(to top, rgb(7 22 41 / 0.95) 0%, transparent 55%); }
+      .x-hero__in { max-width: var(--page-max); margin: 0 auto; padding: clamp(32px, 5vw, 60px) var(--gutter) 120px; display: grid; gap: 14px; justify-items: start; }
+      .x-eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 5px 12px; border-radius: var(--r-pill); background: #10284a; border: 1px solid #3a557a; font: var(--type-tag); color: #d8f6fa; }
+      .x-eyebrow::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--x-teal-strong); }
+      .x-brandrow { display: flex; align-items: center; gap: clamp(14px, 2.4vw, 24px); }
+      .x-logo { display: block; flex: none; height: 120px; aspect-ratio: 766 / 502; border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 200, 255, 0.35); box-shadow: 0 0 18px rgba(0, 200, 255, 0.22), 0 8px 24px rgb(7 22 41 / 0.35); }
+      .x-logo img { height: 100%; width: 100%; object-fit: cover; display: block; }
+      .x-hero h1 { font: var(--weight-bold) clamp(28px, 4.2vw, 46px)/1.15 var(--sans); max-width: 24ch; }
+      .x-hero__sub { font: var(--weight-regular) var(--size-lede)/1.45 var(--sans); color: rgb(242 246 251 / 0.9); max-width: 72ch; }
+      .x-rule { max-width: 95ch; padding-inline-start: 12px; border-inline-start: 2px solid var(--x-teal-strong); font: var(--weight-regular) var(--size-small)/1.5 var(--sans); color: rgb(242 246 251 / 0.78); }
+      .x-rule:empty { display: none; }
+      .x-stamps { display: flex; flex-wrap: wrap; gap: 8px; }
+      .x-stamp { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: var(--r-pill); background: #10284a; border: 1px solid #34507a; font: var(--type-caption); color: #dbe5f1; }
+      .x-stamp svg { width: 14px; height: 14px; color: var(--x-teal-strong); flex: none; }
+      .x-stamp b { color: #fff; font-weight: var(--weight-medium); font-variant-numeric: tabular-nums; }
+      .x-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 4px; }
+      .x-btn { display: inline-flex; align-items: center; gap: 8px; min-height: var(--tap); padding: 8px 16px; border-radius: 10px; border: 1px solid transparent; font: var(--type-label); text-decoration: none; cursor: pointer; transition: background var(--dur-quick) ease, filter var(--dur-quick) ease; }
+      .x-btn svg { width: 16px; height: 16px; flex: none; }
+      .x-btn--primary { background: var(--x-teal-strong); color: #04202a; }
+      .x-btn--primary:hover { filter: brightness(1.1); }
+      .x-btn--ghost { background: #10284a; color: #fff; border-color: #6a84a8; }
+      .x-btn--ghost:hover { background: #1a3a66; }
+      .x-hero :focus-visible { outline-color: #fff; }
+      .x-msg { font: var(--type-caption); color: #bff0f6; }
+      .x-msg:empty { display: none; }
+
+      /* layout */
+      .main.x-app { gap: 28px; }
+      .x-sechead { display: flex; justify-content: space-between; align-items: end; flex-wrap: wrap; gap: 6px 16px; margin-bottom: 14px; }
+      .x-sechead h2 { display: flex; align-items: center; gap: 10px; font: var(--weight-bold) var(--size-heading)/1.3 var(--sans); }
+      .x-sechead h2::before { content: ""; width: 4px; height: 20px; border-radius: 2px; background: var(--x-teal-strong); }
+      .x-sechead p { font: var(--type-caption); color: var(--x-ink-2); }
+
+      /* KPI tiles */
+      .x-kpis { position: relative; z-index: 3; margin-top: -92px; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; }
+      .x-kpi { --k: var(--x-teal); display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 12px; row-gap: 2px; align-items: center; padding: 16px; border-radius: 14px; background: light-dark(rgb(255 255 255 / 0.86), rgb(14 31 53 / 0.84)); -webkit-backdrop-filter: blur(18px) saturate(1.4); backdrop-filter: blur(18px) saturate(1.4); border: 1px solid light-dark(rgb(255 255 255 / 0.9), rgb(255 255 255 / 0.1)); box-shadow: 0 12px 32px rgb(7 22 41 / 0.2); }
+      .x-kpi--gold { --k: var(--x-gold); }
+      .x-kpi--red { --k: var(--x-red); }
+      .x-kpi__icon { grid-row: 1 / span 2; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 10px; background: color-mix(in srgb, var(--k) 14%, transparent); color: var(--k); }
+      .x-kpi__icon svg { width: 22px; height: 22px; }
+      .x-kpi__fig { font: var(--weight-bold) clamp(24px, 2.4vw, 30px)/1.1 var(--sans); font-variant-numeric: tabular-nums; color: var(--x-ink); }
+      .x-kpi--gold .x-kpi__fig, .x-kpi--red .x-kpi__fig { color: var(--k); }
+      .x-kpi__label { font: var(--type-caption); color: var(--x-ink-2); }
+
+      /* regional board */
+      .x-board { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; }
+      .x-cc { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; grid-template-areas: "flag name n" "bar bar bar" "foot foot foot"; align-items: center; gap: 10px; padding: 14px; border: 1px solid var(--x-line); border-radius: 12px; background: var(--x-surface); color: var(--x-ink); font: inherit; text-align: right; cursor: pointer; transition: border-color var(--dur-quick) ease, box-shadow var(--dur-quick) ease, transform var(--dur-quick) ease; }
+      .x-cc:hover { border-color: var(--x-teal); box-shadow: 0 6px 18px rgb(11 31 58 / 0.1); transform: translateY(-1px); }
+      .x-cc__flag { grid-area: flag; display: inline-flex; line-height: 1; }
+      .x-fl { display: block; width: 20px; height: 14px; object-fit: contain; border-radius: 2px; border: 1px solid rgb(0 0 0 / 0.14); box-sizing: content-box; flex: none; }
+      .x-cc__flag .x-fl { width: 28px; height: 19px; }
+      .x-fl.is-np { border: 0; border-radius: 0; }
+      .x-dd-flag { display: inline-flex; align-items: center; gap: 6px; }
+      .x-cc__name { grid-area: name; font: var(--type-label); }
+      .x-cc__n { grid-area: n; font: var(--weight-bold) 22px/1 var(--sans); font-variant-numeric: tabular-nums; }
+      .x-cc__bar { grid-area: bar; height: 5px; border-radius: 3px; background: var(--x-slate); overflow: hidden; }
+      .x-cc__bar i { display: block; height: 100%; border-radius: 3px; background: linear-gradient(to left, var(--x-teal-strong), #3b82f6); }
+      .x-cc__foot { grid-area: foot; display: flex; justify-content: space-between; gap: 8px; font: var(--type-caption); color: var(--x-ink-2); font-variant-numeric: tabular-nums; }
+      .x-cc__new { color: var(--x-gold); font-weight: var(--weight-medium); }
+      .x-cc[aria-pressed="true"] { border-color: var(--x-teal); box-shadow: inset 0 0 0 1px var(--x-teal); background: color-mix(in srgb, var(--x-teal) 9%, var(--x-surface)); }
+      .x-cc.is-zero { cursor: default; background: transparent; border-style: dashed; color: var(--x-ink-2); }
+      .x-cc.is-zero:hover { transform: none; box-shadow: none; border-color: var(--x-line); }
+      .x-cc.is-zero .x-cc__flag { filter: grayscale(1); opacity: 0.55; }
+
+      /* filter bar */
+      .x-filters { position: sticky; top: 0; z-index: 20; display: grid; grid-template-columns: minmax(180px, 2fr) repeat(7, minmax(100px, 1fr)) auto auto auto; gap: 8px; align-items: end; padding: 10px 12px; border: 1px solid var(--x-line); border-radius: 14px; background: light-dark(rgb(255 255 255 / 0.93), rgb(11 26 46 / 0.93)); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); box-shadow: 0 6px 20px rgb(7 22 41 / 0.1); }
+      .x-field { display: grid; gap: 3px; min-width: 0; }
+      .x-field span { font: var(--type-tag); color: var(--x-ink-2); }
+      .x-field input, .x-field select { width: 100%; min-height: 36px; padding: 6px 10px; border: 1px solid var(--x-line); border-radius: 8px; background: var(--x-surface); color: var(--x-ink); font: var(--type-small); }
+      .x-field input:focus, .x-field select:focus { outline: 2px solid var(--x-teal); outline-offset: 0; border-color: var(--x-teal); }
+      .x-tbtn { display: inline-flex; align-items: center; justify-content: center; min-height: 36px; padding: 6px 12px; border: 1px solid var(--x-line); border-radius: 8px; background: var(--x-surface); color: var(--x-ink); font: var(--type-label); white-space: nowrap; cursor: pointer; }
+      .x-tbtn:hover { border-color: var(--x-teal); }
+      .x-tbtn[aria-pressed="true"] { background: var(--x-gold-fill); border-color: var(--x-gold-fill); color: #241a00; }
+
+      /* table */
+      .x-count { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 6px 12px; margin-bottom: 10px; font: var(--type-small); color: var(--x-ink-2); }
+      .x-count b { color: var(--x-ink); font-variant-numeric: tabular-nums; }
+      .x-tablebox { overflow: auto; max-height: calc(100vh - var(--x-fh) - 40px); border: 1px solid var(--x-line); border-radius: 14px; background: var(--x-surface); box-shadow: 0 4px 16px rgb(7 22 41 / 0.05); }
+      .x-table { width: 100%; min-width: 1280px; border-collapse: separate; border-spacing: 0; font: var(--weight-regular) var(--size-small)/1.45 var(--sans); font-variant-numeric: tabular-nums; }
+      .x-table th, .x-table td { text-align: right; vertical-align: top; }
+      .x-table td { padding: 12px 10px; border-bottom: 1px solid var(--x-line-soft); }
+      .x-table thead th { position: sticky; top: 0; z-index: 2; padding: 0; background: var(--x-head); color: #dbe6f3; font: var(--type-tag); letter-spacing: 0.02em; white-space: nowrap; border-bottom: 2px solid var(--x-teal-strong); }
+      .x-sort { display: flex; align-items: center; gap: 5px; width: 100%; min-height: 42px; padding: 8px 10px; border: 0; background: none; color: inherit; font: inherit; text-align: right; cursor: pointer; }
+      .x-sort:hover { color: #fff; }
+      .x-sort::after { content: "↕"; font-size: 11px; opacity: 0.5; }
+      th[aria-sort="ascending"] .x-sort, th[aria-sort="descending"] .x-sort { color: #fff; }
+      th[aria-sort="ascending"] .x-sort::after { content: "↑"; opacity: 1; color: var(--x-teal-strong); }
+      th[aria-sort="descending"] .x-sort::after { content: "↓"; opacity: 1; color: var(--x-teal-strong); }
+      .x-table thead :focus-visible { outline-color: #fff; outline-offset: -3px; }
+      .x-th-plain { display: block; padding: 12px 10px; }
+      .x-row { cursor: pointer; }
+      .x-row.is-alt > td { background: var(--x-surface-2); }
+      .x-row:hover > td { background: color-mix(in srgb, var(--x-teal) 7%, var(--x-surface)); }
+      .x-row.is-new > td:first-child { box-shadow: inset -3px 0 0 var(--x-gold-fill); }
+      .x-row.is-open > td { background: color-mix(in srgb, var(--x-teal) 10%, var(--x-surface)); border-bottom-color: transparent; }
+      .x-row:focus-visible { outline: 2px solid var(--x-teal); outline-offset: -2px; }
+      .x-country { display: flex; align-items: center; gap: 8px; white-space: nowrap; font-weight: var(--weight-bold); }
+      .x-flag { display: inline-flex; line-height: 1; }
+      .x-badges { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+      .x-tag { display: inline-flex; align-items: center; gap: 4px; padding: 1px 8px; border-radius: var(--r-pill); font: var(--type-tag); white-space: nowrap; }
+      .x-tag--new { background: var(--x-gold-fill); color: #241a00; }
+      .x-tag--uniq { background: color-mix(in srgb, var(--x-gold-fill) 16%, transparent); color: var(--x-gold); border: 1px solid color-mix(in srgb, var(--x-gold-fill) 55%, transparent); }
+      .x-tag--spare { background: color-mix(in srgb, var(--x-teal) 14%, transparent); color: var(--x-ink); border: 1px solid color-mix(in srgb, var(--x-teal) 55%, transparent); }
+      .x-tbtn__n { margin-inline-start: 6px; font-variant-numeric: tabular-nums; opacity: 0.75; }
+      .x-tag--f2 { background: color-mix(in srgb, var(--x-green) 15%, transparent); color: color-mix(in srgb, var(--x-green) 70%, var(--x-ink)); border: 1px solid color-mix(in srgb, var(--x-green) 55%, transparent); }
+      .x-tag--f1 { background: var(--x-slate); color: var(--x-ink); border: 1px solid var(--x-line); }
+      .x-tag--f0 { color: var(--x-ink-2); border: 1px dashed var(--x-line); }
+      .x-tag--amended { border: 1px solid var(--x-line); color: var(--x-ink-2); }
+      .x-status { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+      .x-status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--x-green); }
+      .x-cat { max-width: 180px; }
+      .x-catpill { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: var(--r-pill); background: color-mix(in srgb, var(--c) 13%, transparent); color: color-mix(in srgb, var(--c) 78%, var(--x-ink)); font: var(--type-tag); white-space: nowrap; }
+      .x-catpill::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--c); flex: none; }
+      .x-cat small { display: block; margin-top: 5px; font: var(--type-caption); color: var(--x-ink-2); direction: ltr; text-align: right; }
+      .x-sum { min-width: 280px; max-width: 420px; }
+      .x-sum .x-tag { margin-inline-end: 6px; vertical-align: 1px; }
+      .x-reason { display: block; margin-top: 6px; font: var(--type-caption); color: var(--x-ink-2); }
+      .x-pub { max-width: 200px; color: var(--x-ink-2); }
+      .x-nowrap { white-space: nowrap; }
+      .x-due-date { font-weight: var(--weight-bold); white-space: nowrap; }
+      .x-left { --d: var(--x-teal); display: inline-flex; align-items: center; gap: 5px; margin-top: 6px; padding: 2px 8px; border-radius: var(--r-pill); background: color-mix(in srgb, var(--d) 13%, transparent); color: var(--d); font: var(--type-tag); white-space: nowrap; }
+      .x-left::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+      .x-left--red { --d: var(--x-red); }
+      .x-left--amber { --d: var(--x-amber); }
+      .x-left--closed { --d: var(--x-ink-2); }
+      .x-val { max-width: 190px; }
+      .x-val b { display: block; font-weight: var(--weight-bold); }
+      .x-val small { display: block; margin-top: 2px; font: var(--type-caption); color: var(--x-ink-2); }
+      .x-muted { color: var(--x-ink-2); }
+      .x-id { font: 12px/1.4 var(--x-mono); overflow-wrap: anywhere; max-width: 170px; }
+      .x-golink { display: inline-flex; align-items: center; gap: 4px; min-height: 34px; padding: 6px 12px; border-radius: 8px; background: light-dark(#0b1f3a, #0fb5c9); color: light-dark(#fff, #04202a); font: var(--type-tag); text-decoration: none; white-space: nowrap; transition: background var(--dur-quick) ease; }
+      .x-golink:hover { background: light-dark(#0b7d8d, #5fe0ee); }
+      .x-in { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; white-space: normal; }
+      .x-in__search { font: var(--type-caption); color: var(--x-teal); text-decoration: underline; text-underline-offset: 2px; white-space: nowrap; }
+      .x-in__id { display: inline-flex; align-items: center; gap: 6px; min-height: 28px; padding: 3px 8px; border: 1px solid var(--x-line); border-radius: var(--r-pill); background: var(--x-surface-2); color: var(--x-ink); font: 12px/1.3 var(--x-mono); cursor: pointer; direction: ltr; white-space: nowrap; }
+      .x-in__id:hover { border-color: var(--x-teal); }
+      .x-in__id svg { width: 12px; height: 12px; flex: none; color: var(--x-ink-2); }
+      .x-nolink-cell { white-space: normal; min-width: 180px; }
+      .x-nolink { display: grid; gap: 2px; padding: 6px 10px; border: 1px dashed var(--stroke-primary); border-radius: 8px; font: var(--type-caption); color: var(--text-secondary); white-space: normal; overflow-wrap: anywhere; text-align: start; }
+      .x-nolink b { font-weight: var(--weight-medium); color: var(--text-primary); }
+      .x-in__note { margin: 6px 0 0; font: var(--type-caption); color: var(--x-ink-2); }
+      .x-toast { position: fixed; inset-inline: 0; bottom: 24px; margin: 0 auto; width: max-content; max-width: calc(100vw - 32px); padding: 10px 16px; border-radius: var(--r-s); background: var(--x-navy); color: #fff; font: var(--type-small); box-shadow: var(--hark-shadow); z-index: 1000; opacity: 0; transform: translateY(8px); pointer-events: none; transition: opacity var(--dur-quick) var(--ease-out), transform var(--dur-quick) var(--ease-out); }
+      .x-toast.is-on { opacity: 1; transform: none; }
+      .x-toast bdi { font-family: var(--x-mono); }
+      .x-a { color: var(--x-teal); overflow-wrap: anywhere; }
+      .x-empty { padding: 40px 10px; text-align: center; color: var(--x-ink-2); }
+
+      /* spec sheet */
+      .x-detail > td { padding: 0 14px 16px; background: color-mix(in srgb, var(--x-teal) 10%, var(--x-surface)); border-bottom: 1px solid var(--x-line); }
+      .x-spec { border: 1px solid var(--x-line); border-radius: 12px; background: var(--x-surface); overflow: hidden; cursor: auto; }
+      .x-spec__head { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px 12px; padding: 10px 16px; background: var(--x-slate); font: var(--type-label); }
+      .x-spec__head span { font: 12px/1.4 var(--x-mono); color: var(--x-ink-2); }
+      .x-spec__reason { display: grid; gap: 2px; padding: 12px 16px; border-bottom: 1px solid var(--x-line); border-inline-start: 4px solid var(--x-teal-strong); }
+      .x-spec__reason.is-uniq { border-inline-start-color: var(--x-gold-fill); background: color-mix(in srgb, var(--x-gold-fill) 8%, transparent); }
+      .x-spec__reason span { font: var(--type-tag); color: var(--x-ink-2); }
+      .x-dl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-flow: dense; margin: 0; }
+      .x-dl > div { display: grid; grid-template-columns: 10.5em minmax(0, 1fr); gap: 12px; padding: 9px 16px; border-bottom: 1px solid var(--x-line-soft); }
+      .x-dl dt { padding-top: 2px; font: var(--type-tag); color: var(--x-ink-2); }
+      .x-dl dd { margin: 0; overflow-wrap: anywhere; white-space: pre-line; }
+      .x-dl .x-wide { grid-column: 1 / -1; }
+
+      /* coverage board */
+      .x-legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font: var(--type-caption); color: var(--x-ink-2); }
+      .x-legend span { display: inline-flex; align-items: center; gap: 6px; }
+      .x-covgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 10px; }
+      .x-cov { --s: var(--x-green); display: grid; align-content: start; gap: 8px; padding: 14px 16px; border: 1px solid var(--x-line); border-radius: 12px; background: var(--x-surface); }
+      .x-cov.is-warn { --s: var(--x-amber); }
+      .x-cov__top { display: flex; align-items: center; gap: 10px; }
+      .x-cov__top h3 { font: var(--type-label); }
+      .x-sdot { width: 10px; height: 10px; border-radius: 50%; flex: none; background: var(--s, var(--x-green)); box-shadow: 0 0 0 4px color-mix(in srgb, var(--s, var(--x-green)) 20%, transparent); }
+      .x-legend .x-sdot--warn { --s: var(--x-amber); }
+      .x-npill { margin-inline-start: auto; padding: 2px 9px; border-radius: var(--r-pill); background: var(--x-slate); font: var(--type-tag); font-variant-numeric: tabular-nums; white-space: nowrap; }
+      .x-cov__state { font: var(--type-tag); color: var(--s); }
+      .x-cov__text { font: var(--weight-regular) var(--size-meta)/1.5 var(--sans); color: var(--x-ink-2); }
+      .x-closed { margin-top: 12px; padding: 14px 16px; border: 1px dashed var(--x-line); border-radius: 12px; }
+      .x-closed h3 { font: var(--type-label); }
+      .x-aside-list { margin: 8px 0 0; padding-inline-start: 18px; font: var(--type-small); color: var(--x-ink-2); }
+      .x-foot-note { max-width: 80ch; }
+
+      @media (max-width: 1200px) {
+        .x-kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        .x-filters { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        .x-filters .x-search { grid-column: 1 / -1; }
+      }
+      @media (max-width: 760px) {
+        .x-hero__in { padding-bottom: 100px; }
+        .x-logo { height: 76px; }
+        .x-btn { width: 100%; justify-content: center; }
+        .x-actions { width: 100%; }
+        .x-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: -76px; gap: 8px; }
+        .x-kpi { grid-template-columns: minmax(0, 1fr); padding: 12px; row-gap: 4px; }
+        .x-kpi__icon { grid-row: auto; width: 32px; height: 32px; }
+        .x-kpi__icon svg { width: 18px; height: 18px; }
+        .x-board { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+        .x-cc { padding: 12px; gap: 8px; min-width: 0; }
+        .x-cc__foot { flex-wrap: wrap; gap: 2px 8px; min-width: 0; }
+        .x-cc__name { min-width: 0; overflow-wrap: anywhere; }
+        .x-filters { position: static; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .x-field input, .x-field select, .x-tbtn, .x-golink { min-height: var(--tap); }
+        .x-in__search, .x-in__id { display: inline-flex; align-items: center; min-height: var(--tap); min-width: var(--tap); }
+        .x-in__search { padding-inline: 4px; }
+        .x-in__id { padding: 6px 12px; }
+        .x-tablebox { max-height: none; overflow: visible; border: 0; background: none; box-shadow: none; }
+        .x-table { min-width: 0; }
+        .x-table thead { display: none; }
+        .x-table, .x-table tbody, .x-table tr, .x-table td { display: block; }
+        .x-row { padding: 12px 14px; margin-bottom: 10px; border: 1px solid var(--x-line); border-radius: 12px; background: var(--x-surface); }
+        .x-row.is-new { border-inline-start: 3px solid var(--x-gold-fill); }
+        .x-row.is-open { margin-bottom: 0; border-radius: 12px 12px 0 0; }
+        .x-row > td { border: 0; padding: 4px 0; background: none !important; box-shadow: none !important; max-width: none; min-width: 0; }
+        .x-row > td[data-label] { display: grid; grid-template-columns: 6.5em minmax(0, 1fr); gap: 10px; }
+        .x-row > td[data-label]::before { content: attr(data-label); padding-top: 2px; font: var(--type-tag); color: var(--x-ink-2); }
+        .x-row > td.is-blank { display: none; }
+        .x-cat small { text-align: right; }
+        .x-detail { margin-bottom: 10px; }
+        .x-detail > td { padding: 0 8px 8px; border-radius: 0 0 12px 12px; }
+        .x-dl { grid-template-columns: minmax(0, 1fr); }
+        .x-dl > div { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+        .x-covgrid { grid-template-columns: minmax(0, 1fr); }
+        .x-row > td.x-nowrap { white-space: normal; }
+        .x-golink, .x-in__search, .x-in__id { white-space: normal; max-width: 100%; overflow-wrap: anywhere; }
+        .x-in__id span { min-width: 0; overflow-wrap: anywhere; }
+        .x-catpill, .x-tag, .x-left, .x-status, .x-country { white-space: normal; max-width: 100%; overflow-wrap: anywhere; }
+        .x-row > td, .x-detail, .x-detail *, .x-covgrid, .x-cov__text, .x-aside-list, .x-rule, .x-util__in { overflow-wrap: anywhere; min-width: 0; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page" id="top">
+      <div class="x-util">
+        <div class="x-util__in">
+          <span class="x-util__start"><span class="x-util__logo"><img src="apac_globe_logo.png" alt="Asia-Pacific Division" /></span><span class="x-util__brand">Asia-Pacific Defence Procurement Monitor</span></span>
+          <span>סריקה אחרונה: <b id="util-scan"></b></span>
+        </div>
+      </div>
+      <header class="x-hero">
+        <img class="x-hero__img" src="apac_hero.png" alt="" />
+        <div class="x-hero__in">
+          <p class="x-eyebrow">מעקב רכש ביטחוני · אסיה פסיפיק</p>
+          <div class="x-brandrow">
+            <span class="x-logo"><img src="apac_globe_logo.png" alt="Asia-Pacific Division" /></span>
+            <h1>דשבורד מכרזים ביטחוניים – אסיה פסיפיק</h1>
+          </div>
+          <p class="x-hero__sub">12 מדינות: יפן, קוריאה הדרומית, הודו, נפאל, סרי לנקה, אוסטרליה, ניו זילנד, תאילנד, וייטנאם, פיג'י, סינגפור, הפיליפינים</p>
+          <p class="x-rule" id="filter-rule"></p>
+          <div class="x-stamps">
+            <span class="x-stamp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>עודכן לאחרונה: <b id="last-scan"></b></span>
+            <span class="x-stamp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>סריקה הבאה: <b id="next-scan"></b></span>
+          </div>
+          <div class="x-actions">
+            <button class="x-btn x-btn--primary" type="button" id="export-all"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>ייצוא לאקסל (כל המכרזים הפתוחים המשמעותיים)</button>
+            <button class="x-btn x-btn--ghost" type="button" id="export-filtered"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16l-6 7v6l-4 2v-8z"/></svg>ייצוא לאקסל (לפי הסינון)</button>
+            <p class="x-msg" id="export-msg" role="status" aria-live="polite"></p>
+          </div>
+        </div>
+      </header>
+      <main class="main x-app">
+        <section class="x-kpis" aria-label="מדדים">
+          <div class="x-kpi"><span class="x-kpi__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></span><span class="x-kpi__fig" id="kpi-total">0</span><span class="x-kpi__label">מכרזים פתוחים</span></div>
+          <div class="x-kpi x-kpi--gold"><span class="x-kpi__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.2 5.3L20 9l-4.4 3.8L17 18.5 12 15.6 7 18.5l1.4-5.7L4 9l5.8-.7z"/></svg></span><span class="x-kpi__fig" id="kpi-new">0</span><span class="x-kpi__label">חדשים מאז הסריקה הקודמת</span></div>
+          <div class="x-kpi x-kpi--red"><span class="x-kpi__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6"/></svg></span><span class="x-kpi__fig" id="kpi-soon">0</span><span class="x-kpi__label">נסגרים תוך 7 ימים</span></div>
+          <div class="x-kpi"><span class="x-kpi__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span><span class="x-kpi__fig" id="kpi-countries">0</span><span class="x-kpi__label">מדינות עם מכרזים פתוחים</span></div>
+          <div class="x-kpi"><span class="x-kpi__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M16.5 7.5c0-1.7-2-3-4.5-3s-4.5 1.3-4.5 3 2 2.6 4.5 3 4.5 1.3 4.5 3-2 3-4.5 3-4.5-1.3-4.5-3"/></svg></span><span class="x-kpi__fig" id="kpi-major">0</span><span class="x-kpi__label">תוכניות &gt; USD 1M</span></div>
+          <div class="x-kpi x-kpi--gold"><span class="x-kpi__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></span><span class="x-kpi__fig" id="kpi-uniq">0</span><span class="x-kpi__label">ייחודיים</span></div>
+        </section>
+
+        <section aria-labelledby="by-country">
+          <div class="x-sechead"><h2 id="by-country">לוח אזורי: מכרזים פתוחים לפי מדינה</h2><p>לחיצה על מדינה מסננת את הטבלה</p></div>
+          <div class="x-board" id="country-chips"></div>
+        </section>
+
+        <section aria-label="סינון" class="x-filters" id="filters">
+          <label class="x-field x-search"><span>חיפוש חופשי</span><input type="search" id="f-q" placeholder="חיפוש בכל השדות…" /></label>
+          <label class="x-field"><span>מדינה</span><select id="f-country"></select></label>
+          <label class="x-field"><span>קטגוריה</span><select id="f-cat"></select></label>
+          <label class="x-field"><span>סטטוס</span><select id="f-status"></select></label>
+          <label class="x-field"><span>סוג מסמך</span><select id="f-type"></select></label>
+          <label class="x-field"><span>מועד הגשה</span>
+            <select id="f-due">
+              <option value="">הכל</option>
+              <option value="7">תוך 7 ימים</option>
+              <option value="14">תוך 14 ימים</option>
+              <option value="30">תוך 30 ימים</option>
+              <option value="31">מעל 30 ימים</option>
+            </select>
+          </label>
+          <label class="x-field"><span>סוג הכללה</span>
+            <select id="f-major">
+              <option value="">הכל</option>
+              <option value="major">תוכניות &gt; USD 1M</option>
+              <option value="uniq">ייחודיים</option>
+            </select>
+          </label>
+          <label class="x-field"><span>התאמה ליצואנים זרים</span>
+            <select id="f-foreign">
+              <option value="en">באנגלית / פתוח לזרים</option>
+              <option value="open">רק פתוח ליצואנים זרים</option>
+              <option value="all" selected>הכול</option>
+            </select>
+          </label>
+          <button class="x-tbtn" type="button" id="f-new" aria-pressed="false">רק חדשים</button>
+          <button class="x-tbtn" type="button" id="f-spare" aria-pressed="false">חלפים<span class="x-tbtn__n" id="f-spare-n"></span></button>
+          <button class="x-tbtn" type="button" id="f-reset">איפוס</button>
+        </section>
+
+        <section aria-label="טבלת מכרזים">
+          <div class="x-count"><p id="count-line" role="status" aria-live="polite"></p><p>לחיצה על שורה פותחת את מפרט המכרז המלא</p></div>
+          <div class="x-tablebox">
+            <table class="x-table">
+              <thead><tr id="thead-row"></tr></thead>
+              <tbody id="tbody"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="coverage" aria-labelledby="cov-title">
+          <div class="x-sechead">
+            <h2 id="cov-title">כיסוי מקורות בסריקה האחרונה</h2>
+            <p class="x-legend"><span><i class="x-sdot" aria-hidden="true"></i>כיסוי מלא · <b id="cov-ok">0</b></span><span><i class="x-sdot x-sdot--warn" aria-hidden="true"></i>כיסוי חלקי או מוגבל · <b id="cov-warn">0</b></span></p>
+          </div>
+          <div class="x-covgrid" id="coverage-list"></div>
+          <div class="x-closed">
+            <h3>נסגרו/הוסרו בסריקה זו</h3>
+            <ul class="x-aside-list" id="closed-list"></ul>
+          </div>
+        </section>
+      </main>
+      <footer class="foot">
+        <p class="x-foot-note">כל מכרז אומת מול הפורטל הרשמי; כשאין לפורטל קישור ישיר לפריט, הקישור מוביל לפורטל ויש לחפש לפי מספר המכרז. 'ל.י' = לא צוין.</p>
+        <p class="x-foot-note">מקורות: פורטלי רכש ממשלתיים רשמיים</p>
+      </footer>
+    </div>
+
+    <!-- data.js is regenerated by scripts/tenders.ps1 (build / expire / daily) -->
+    <script src="data.js"></script>
+    
+    <script>
+      const DATA = window.DASHBOARD_DATA || { columns: [], meta: {}, rows: [] };
+      // Daily changes (extended deadlines, reopened or cancelled tenders) published on top of data.js.
+      (function () {
+        const o = window.DASHBOARD_OVERRIDES;
+        if (!o || !DATA.meta || !o.base || o.base !== DATA.meta.build_id) return;
+        const rm = new Set(o.remove || []), up = new Map((o.upsert || []).map((r) => [r._key, r]));
+        DATA.rows = DATA.rows.filter((r) => !rm.has(r._key) && !up.has(r._key)).concat(Array.from(up.values()));
+        Object.assign(DATA.meta, o.meta || {});
+      })();
+      // Excel export is built in the browser from the visible rows.
+      const XLSX_B64 = "";
+    </script>
+    <div id="x-flag-src" hidden aria-hidden="true">
+      <img data-c="יפן" src="flag_jp.svg" alt="" />
+      <img data-c="קוריאה הדרומית" src="flag_kr.svg" alt="" />
+      <img data-c="הודו" src="flag_in.svg" alt="" />
+      <img data-c="נפאל" src="flag_np.svg" alt="" />
+      <img data-c="סרי לנקה" src="flag_lk.svg" alt="" />
+      <img data-c="אוסטרליה" src="flag_au.svg" alt="" />
+      <img data-c="ניו זילנד" src="flag_nz.svg" alt="" />
+      <img data-c="תאילנד" src="flag_th.svg" alt="" />
+      <img data-c="וייטנאם" src="flag_vn.svg" alt="" />
+      <img data-c="פיג'י" src="flag_fj.svg" alt="" />
+      <img data-c="סינגפור" src="flag_sg.svg" alt="" />
+      <img data-c="הפיליפינים" src="flag_ph.svg" alt="" />
+    </div>
+    <script src="hark.js"></script>
+    <script>
+      /*APP_SCRIPT*/
+      (function () {
+        const COLS = DATA.columns;
+        // Safety net: never show a tender whose deadline has passed, even if the daily job did not run.
+        const _n = new Date(), pad = (x) => String(x).padStart(2, "0");
+        const TODAY_ISO = `${_n.getFullYear()}-${pad(_n.getMonth() + 1)}-${pad(_n.getDate())}`;
+        const ROWS = DATA.rows.filter((r) => !r._closing_iso || r._closing_iso >= TODAY_ISO).map((r, i) => Object.assign({ _id: i }, r));
+        const META = DATA.meta || {};
+        const C = {
+          cat: 'קטגוריית סיב"ט', country: "מדינה", type: "סוג המסמך", sum: "תמצית תכולה בעברית",
+          pub: "תאריך פרסום", due: "תאריך אחרון להגשה", qty: "כמויות", val: "ערך כספי",
+          publisher: "מפרסם המכרז", link: "קישור רשמי למכרז", id: "מספר מכרז / Notice ID", status: "סטטוס"
+        };
+        const $ = (id) => document.getElementById(id);
+        const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+        const blank = (v) => v == null || String(v).trim() === "" || String(v).trim() === "ל.י";
+        const catGroup = (r) => String(r[C.cat] || "").split(",")[0].trim();
+        // Flag images, keyed by country; the SVGs are embedded into the page as data URIs.
+        const FLAGS = {};
+        document.querySelectorAll("#x-flag-src img").forEach((im) => { FLAGS[im.dataset.c] = im.getAttribute("src"); });
+        const flag = (c) => FLAGS[c] ? `<img class="x-fl${c === "נפאל" ? " is-np" : ""}" src="${FLAGS[c]}" alt="" />` : "";
+        const isUniq = (r) => String(r._major_reason || "").trim().startsWith("ייחודי:");
+        const CAT_KEYS = [[/^(AEROSPACE|AIR)/, "air"], [/^NAVAL/, "naval"], [/^LAND/, "land"], [/^(HOMELAND|LAW)/, "hls"], [/^(UNMANNED|DRONE|UAV|COUNTER)/, "uav"], [/^(ELECTRONIC|C4|C2|CYBER|SPACE|SENSOR|RADAR)/, "ew"], [/^(AMMUNITION|WEAPON|ARMS|MISSILE|ARTILLERY)/, "arms"]];
+        const catKey = (g) => { const u = g.toUpperCase(); for (const [re, k] of CAT_KEYS) if (re.test(u)) return k; return "misc"; };
+        const dmy = (s) => { const m = /^(\d{1,2})\.(\d{1,2})\.(\d{4})/.exec(String(s || "")); return m ? new Date(+m[3], +m[2] - 1, +m[1]) : null; };
+        const isoD = (s) => { const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(s || "")); return m ? new Date(+m[1], +m[2] - 1, +m[3]) : null; };
+
+        // Reference day: today, but never earlier than the last scan
+        const now = new Date(); let today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+        const scan = dmy(META.last_scan); if (scan && scan > today) today = scan;
+        ROWS.forEach((r) => {
+          const d = isoD(r._closing_iso) || dmy(r[C.due]);
+          r._days = d ? Math.round((d - today) / 86400000) : null;
+          r._dueT = d ? d.getTime() : Infinity;
+          const p = dmy(r[C.pub]); r._pubT = p ? p.getTime() : 0;
+          r._text = COLS.map((c) => r[c]).join(" ").toLowerCase();
+        });
+
+        // Header stamps and KPIs
+        $("last-scan").textContent = META.last_update || META.last_scan || "ל.י";
+        $("next-scan").textContent = META.next_scan || "ל.י";
+        if (META.filter_rule) $("filter-rule").textContent = "סינון: " + META.filter_rule;
+        // Foreign-exporter fit: 2 open to foreign, 1 English with local preference, 0 local only
+        const fv = (r) => +r._foreign || 0;
+        const FOREIGN_OK = { en: (r) => fv(r) >= 1, open: (r) => fv(r) === 2, all: () => true };
+        const foreignTag = (r) => blank(r._foreign_label) ? "" : `<span class="x-tag x-tag--f${fv(r)}">${esc(r._foreign_label)}</span>`;
+        const state = { q: "", country: "", cat: "", status: "", type: "", due: "", major: "", foreign: "all", onlyNew: false, onlySpare: false, sort: "due", dir: 1, userSort: false, open: new Set() };
+        const BASE = () => ROWS.filter(FOREIGN_OK[state.foreign] || FOREIGN_OK.all);
+        const countries = Array.from(new Set(Object.keys(META.coverage || {}).concat(ROWS.map((r) => r[C.country]))));
+        const countOf = (c) => BASE().filter((r) => r[C.country] === c).length;
+        const isSpare = (r) => r._group === "חלפים";
+        function renderKpis() {
+          const B = BASE();
+          $("kpi-total").textContent = B.length;
+          $("kpi-new").textContent = B.filter((r) => r._new).length;
+          $("kpi-soon").textContent = B.filter((r) => r._days != null && r._days >= 0 && r._days <= 7).length;
+          $("kpi-countries").textContent = countries.filter((c) => countOf(c) > 0).length;
+          $("kpi-major").textContent = B.filter((r) => !isUniq(r)).length;
+          $("kpi-uniq").textContent = B.filter(isUniq).length;
+          $("f-spare-n").textContent = B.filter(isSpare).length;
+        }
+        renderKpis();
+        $("util-scan").textContent = META.last_scan || "ל.י";
+
+        // Filters
+        const fill = (sel, values) => { sel.innerHTML = '<option value="">הכל</option>' + values.map((v) => `<option value="${esc(v)}">${esc(v)}</option>`).join(""); };
+        const uniq = (f) => Array.from(new Set(ROWS.map(f).filter((v) => !blank(v)))).sort((a, b) => a.localeCompare(b, "he"));
+        fill($("f-country"), countries.filter((c) => countOf(c) > 0).sort((a, b) => countOf(b) - countOf(a)));
+        fill($("f-cat"), uniq(catGroup));
+        fill($("f-status"), uniq((r) => r[C.status]));
+        fill($("f-type"), uniq((r) => r[C.type]));
+
+        const chipsBox = $("country-chips");
+        function renderChips() {
+          const B = BASE(), total = B.length;
+          chipsBox.innerHTML = countries.slice().sort((a, b) => countOf(b) - countOf(a)).map((c) => {
+            const n = countOf(c), pct = total ? Math.round((n / total) * 100) : 0;
+            const nNew = B.filter((r) => r[C.country] === c && r._new).length;
+            const foot = n ? `<span>${pct}% מהסך</span>${nNew ? `<span class="x-cc__new">${nNew} חדשים</span>` : `<span>${n === 1 ? "מכרז פתוח" : "מכרזים פתוחים"}</span>`}` : "<span>אין מכרזים פתוחים</span>";
+            return `<button type="button" class="x-cc${n ? "" : " is-zero"}" data-c="${esc(c)}" aria-pressed="${state.country === c}"${n ? "" : " disabled"}>` +
+              `<span class="x-cc__flag" aria-hidden="true">${flag(c)}</span><span class="x-cc__name">${esc(c)}</span><span class="x-cc__n">${n}</span>` +
+              `<span class="x-cc__bar" aria-hidden="true"><i style="width:${pct}%"></i></span><span class="x-cc__foot">${foot}</span></button>`;
+          }).join("");
+        }
+        chipsBox.addEventListener("click", (e) => {
+          const b = e.target.closest(".x-cc"); if (!b || b.disabled) return;
+          state.country = state.country === b.dataset.c ? "" : b.dataset.c;
+          syncControls(); render();
+        });
+
+        function syncControls() {
+          $("f-q").value = state.q; $("f-country").value = state.country; $("f-cat").value = state.cat;
+          $("f-status").value = state.status; $("f-type").value = state.type; $("f-due").value = state.due; $("f-major").value = state.major; $("f-foreign").value = state.foreign;
+          $("f-new").setAttribute("aria-pressed", String(state.onlyNew));
+          $("f-spare").setAttribute("aria-pressed", String(state.onlySpare));
+          renderChips();
+        }
+        $("f-q").addEventListener("input", (e) => { state.q = e.target.value; render(); });
+        [["f-country", "country"], ["f-cat", "cat"], ["f-status", "status"], ["f-type", "type"], ["f-due", "due"], ["f-major", "major"], ["f-foreign", "foreign"]].forEach(([id, k]) => {
+          $(id).addEventListener("change", (e) => { state[k] = e.target.value; if (k === "foreign") renderKpis(); if (k === "country" || k === "foreign") renderChips(); render(); });
+        });
+        $("f-new").addEventListener("click", () => { state.onlyNew = !state.onlyNew; syncControls(); render(); });
+        $("f-spare").addEventListener("click", () => { state.onlySpare = !state.onlySpare; syncControls(); render(); });
+        $("f-reset").addEventListener("click", () => {
+          Object.assign(state, { q: "", country: "", cat: "", status: "", type: "", due: "", major: "", foreign: "all", onlyNew: false, onlySpare: false, sort: "due", dir: 1, userSort: false });
+          state.open.clear(); renderKpis(); syncControls(); renderHead(); render();
+        });
+
+        function filtered() {
+          const q = state.q.trim().toLowerCase();
+          let list = ROWS.filter((r) => {
+            if (q && !q.split(/\s+/).every((w) => r._text.includes(w))) return false;
+            if (state.country && r[C.country] !== state.country) return false;
+            if (state.cat && catGroup(r) !== state.cat) return false;
+            if (state.status && r[C.status] !== state.status) return false;
+            if (state.type && r[C.type] !== state.type) return false;
+            if (!(FOREIGN_OK[state.foreign] || FOREIGN_OK.all)(r)) return false;
+            if (state.onlyNew && !r._new) return false;
+            if (state.onlySpare && !isSpare(r)) return false;
+            if (state.major === "major" && isUniq(r)) return false;
+            if (state.major === "uniq" && !isUniq(r)) return false;
+            if (state.due) {
+              const n = +state.due;
+              if (r._days == null) return false;
+              if (n === 31 ? r._days <= 30 : r._days > n || r._days < 0) return false;
+            }
+            return true;
+          });
+          const key = SORTS[state.sort];
+          list.sort((a, b) => {
+            if (!state.userSort && fv(a) !== fv(b)) return fv(b) - fv(a);
+            const x = key(a), y = key(b); const c = typeof x === "number" ? x - y : String(x).localeCompare(String(y), "he"); return (c || a._dueT - b._dueT) * state.dir;
+          });
+          return list;
+        }
+
+        // Table
+        const HEAD = [
+          { k: "country", label: "מדינה" }, { k: "cat", label: "קטגוריה" }, { k: "type", label: "סוג" },
+          { k: "sum", label: "תמצית", plain: true }, { k: "pub", label: "פרסום" }, { k: "due", label: "הגשה עד" },
+          { k: "val", label: "ערך כספי" }, { k: "publisher", label: "מפרסם", plain: true },
+          { k: "id", label: "מספר מכרז" }, { k: "status", label: "סטטוס" }, { k: "link", label: "קישור", plain: true }
+        ];
+        const SORTS = {
+          country: (r) => r[C.country] || "", cat: (r) => r[C.cat] || "", type: (r) => r[C.type] || "",
+          pub: (r) => r._pubT, due: (r) => r._dueT, val: (r) => (blank(r[C.val]) ? "\uffff" : r[C.val]),
+          id: (r) => r[C.id] || "", status: (r) => r[C.status] || ""
+        };
+        function renderHead() {
+          $("thead-row").innerHTML = HEAD.map((h) => {
+            if (h.plain) return `<th scope="col"><span class="x-th-plain">${h.label}</span></th>`;
+            const s = state.sort === h.k ? (state.dir > 0 ? "ascending" : "descending") : "none";
+            return `<th scope="col" aria-sort="${s}"><button type="button" class="x-sort" data-k="${h.k}">${h.label}</button></th>`;
+          }).join("");
+        }
+        $("thead-row").addEventListener("click", (e) => {
+          const b = e.target.closest(".x-sort"); if (!b) return;
+          if (state.sort === b.dataset.k) state.dir *= -1; else { state.sort = b.dataset.k; state.dir = 1; }
+          state.userSort = true; renderHead(); render();
+        });
+
+        function dueCell(r) {
+          let out = `<span class="x-due-date">${esc(r[C.due] || "ל.י")}</span>`;
+          const d = r._days;
+          if (d != null) {
+            const cls = d < 0 ? "x-left--closed" : d <= 3 ? "x-left--red" : d <= 7 ? "x-left--amber" : "";
+            const txt = d < 0 ? "ההגשה נסגרה" : d === 0 ? "היום" : d === 1 ? "מחר" : `עוד ${d} ימים`;
+            out += `<br><span class="x-left ${cls}">${txt}</span>`;
+          }
+          return out;
+        }
+        function valCell(v) {
+          if (blank(v)) return `<span class="x-muted">ל.י</span>`;
+          const s = String(v), i = s.indexOf("(");
+          return i > 0 ? `<b><bdi>${esc(s.slice(0, i).trim())}</bdi></b><small>${esc(s.slice(i))}</small>` : `<b><bdi>${esc(s)}</bdi></b>`;
+        }
+        function td(label, html, cls, raw) {
+          const b = raw !== undefined && blank(raw);
+          return `<td data-label="${label}" class="${(cls || "") + (b ? " is-blank" : "")}">${html}</td>`;
+        }
+        // India (NIC GePNIC portals): no direct tender links, so offer the portal plus the Tender ID
+        const isIndiaPortal = (u) => /defproc\.gov\.in|eprocure\.gov\.in/i.test(String(u || ""));
+        const tenderId = (r) => { const m = /\d{4}_[A-Z0-9]+_\d+_\d+/.exec(String(r[C.id] || "")); return m ? m[0] : ""; };
+        const COPY_ICON = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="5.5" y="5.5" width="8" height="8" rx="1.5"/><path d="M10.5 3.5v-.5a1.5 1.5 0 0 0-1.5-1.5H4A1.5 1.5 0 0 0 2.5 3v5A1.5 1.5 0 0 0 4 9.5h.5"/></svg>';
+        const isUrl = (u) => /^https?:\/\//i.test(String(u || "").trim());
+        function noLinkHtml(u) {
+          if (blank(u)) return "ל.י";
+          return `<div class="x-nolink"><b>אין קישור ישיר</b><span>${esc(String(u).trim())}</span></div>`;
+        }
+        function linkHtml(u, r) {
+          if (!isUrl(u)) return noLinkHtml(u);
+          u = String(u).trim();
+          const tid = r && isIndiaPortal(u) ? tenderId(r) : "";
+          if (!tid) return `<a class="x-golink" href="${esc(u)}" target="_blank" rel="noopener">למכרז ↗</a>`;
+          return `<div class="x-in">` +
+            `<a class="x-golink x-in__go" href="${esc(u)}" target="_blank" rel="noopener" data-tid="${esc(tid)}">רשימה רשמית (CPPP) + העתק Tender ID ↗</a>` +
+            `<a class="x-in__search" href="https://www.google.com/search?q=${encodeURIComponent('"' + tid + '"')}" target="_blank" rel="noopener">חיפוש לפי Tender ID ↗</a>` +
+            `<button type="button" class="x-in__id" data-tid="${esc(tid)}" aria-label="העתק Tender ID ${esc(tid)}"><span>${esc(tid)}</span>${COPY_ICON}</button>` +
+            `</div>`;
+        }
+        function copyText(t) {
+          const fallback = () => {
+            const ta = document.createElement("textarea"); ta.value = t; ta.setAttribute("readonly", "");
+            ta.style.position = "fixed"; ta.style.opacity = "0"; document.body.appendChild(ta); ta.select();
+            try { document.execCommand("copy"); } catch (e) {} ta.remove();
+          };
+          if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(t).catch(fallback); else fallback();
+        }
+        let toastEl = null, toastT = 0;
+        function toast(tid) {
+          if (!toastEl) { toastEl = document.createElement("div"); toastEl.className = "x-toast"; toastEl.setAttribute("role", "status"); toastEl.setAttribute("aria-live", "polite"); document.body.appendChild(toastEl); }
+          toastEl.innerHTML = `Tender ID הועתק: <bdi>${esc(tid)}</bdi> — בעמוד שנפתח: Ctrl+F והדבק`;
+          requestAnimationFrame(() => toastEl.classList.add("is-on"));
+          clearTimeout(toastT); toastT = setTimeout(() => toastEl.classList.remove("is-on"), 4500);
+        }
+        document.addEventListener("click", (e) => {
+          const el = e.target.closest(".x-in__go, .x-in__id"); if (!el) return;
+          const tid = el.dataset.tid; copyText(tid); toast(tid);
+          // the portal link opens itself in a new tab (target=_blank)
+        });
+        function detailHtml(r) {
+          const wide = new Set([C.sum, "תמצית: שפת מקור", "תכולת המכרז", "פרטי התקשרות", "נספחים", C.link]);
+          const head = `<div class="x-spec__head"><b>מפרט מכרז ${foreignTag(r)}</b><span><bdi>${esc(r[C.id] || "")}</bdi></span></div>`;
+          const reason = blank(r._major_reason) ? "" : `<div class="x-spec__reason${isUniq(r) ? " is-uniq" : ""}"><span>סיבת הכללה</span><b>${esc(r._major_reason)}</b></div>`;
+          return `<div class="x-spec">` + head + reason + `<dl class="x-dl">` + COLS.map((c) => {
+            const v = r[c];
+            const val = c === C.link ? (isUrl(v) ? `<a class="x-a" href="${esc(v)}" target="_blank" rel="noopener">${esc(v)}</a>` + (isIndiaPortal(v) ? `<p class="x-in__note">פורטלי הודו אינם מאפשרים קישור ישיר למכרז; הקישור מוביל לעמוד הרשימה הרשמי של CPPP שבו המכרז מופיע. חפשו בו לפי Tender ID.</p>` : "") : noLinkHtml(v)) : c === C.country && FLAGS[v] ? `<span class="x-dd-flag">${flag(v)}${esc(v)}</span>` : esc(blank(v) ? "ל.י" : v);
+            return `<div class="${wide.has(c) ? "x-wide" : ""}"><dt>${esc(c)}</dt><dd>${val}</dd></div>`;
+          }).join("") + `</dl></div>`;
+        }
+        let current = [];
+        function render() {
+          current = filtered();
+          $("count-line").innerHTML = `מוצגים <b>${current.length}</b> מתוך ${ROWS.length} מכרזים`;
+          if (!current.length) { $("tbody").innerHTML = `<tr><td class="x-empty" colspan="${HEAD.length}">אין מכרזים שתואמים לסינון</td></tr>`; return; }
+          $("tbody").innerHTML = current.map((r, i) => {
+            const open = state.open.has(r._id);
+            const cat = String(r[C.cat] || ""); const g = catGroup(r); const rest = cat.slice(g.length).replace(/^\s*,\s*/, "");
+            const u = isUniq(r);
+            const reasonTxt = blank(r._major_reason) ? "" : String(r._major_reason).replace(/^\s*ייחודי:\s*/, "");
+            let row = `<tr class="x-row${r._new ? " is-new" : ""}${i % 2 ? " is-alt" : ""}${open ? " is-open" : ""}" data-id="${r._id}" tabindex="0" aria-expanded="${open}">` +
+              td("מדינה", `<span class="x-country"><span class="x-flag" aria-hidden="true">${flag(r[C.country])}</span>${esc(r[C.country])}</span><span class="x-badges">${r._new ? '<span class="x-tag x-tag--new">חדש</span>' : ""}${isSpare(r) ? '<span class="x-tag x-tag--spare">חלפים</span>' : ""}${foreignTag(r)}</span>`, "") +
+              td("קטגוריה", `<span class="x-catpill" style="--c: var(--x-c-${catKey(g)})">${esc(g)}</span>${rest ? `<small>${esc(rest)}</small>` : ""}`, "x-cat", r[C.cat]) +
+              td("סוג", esc(r[C.type]), "x-nowrap", r[C.type]) +
+              td("תמצית", (u ? '<span class="x-tag x-tag--uniq">★ ייחודי</span>' : "") + esc(r[C.sum]) + (reasonTxt ? `<span class="x-reason">סיבת הכללה: ${esc(reasonTxt)}</span>` : ""), "x-sum", r[C.sum]) +
+              td("פרסום", esc(r[C.pub]), "x-nowrap", r[C.pub]) +
+              td("הגשה עד", dueCell(r), "") +
+              td("ערך כספי", valCell(r[C.val]), "x-val") +
+              td("מפרסם", esc(r[C.publisher]), "x-pub", r[C.publisher]) +
+              td("מספר מכרז", `<bdi class="x-id">${esc(r[C.id])}</bdi>`, "", r[C.id]) +
+              td("סטטוס", r[C.status] === "Amended" ? `<span class="x-tag x-tag--amended">${esc(r[C.status])}</span>` : `<span class="x-status">${esc(r[C.status])}</span>`, "x-nowrap", r[C.status]) +
+              td("קישור", linkHtml(r[C.link], r), isUrl(r[C.link]) ? "x-nowrap" : "x-nolink-cell", r[C.link]) + `</tr>`;
+            if (open) row += `<tr class="x-detail"><td colspan="${HEAD.length}">${detailHtml(r)}</td></tr>`;
+            return row;
+          }).join("");
+        }
+        function toggle(tr) {
+          const id = +tr.dataset.id;
+          if (state.open.has(id)) state.open.delete(id); else state.open.add(id);
+          render();
+          const again = document.querySelector(`.x-row[data-id="${id}"]`); if (again) again.focus({ preventScroll: true });
+        }
+        $("tbody").addEventListener("click", (e) => {
+          if (e.target.closest("a") || e.target.closest(".x-in") || e.target.closest(".x-spec")) return;
+          const tr = e.target.closest(".x-row"); if (tr) toggle(tr);
+        });
+        $("tbody").addEventListener("keydown", (e) => {
+          if (e.target.classList.contains("x-row") && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); toggle(e.target); }
+        });
+
+        // Coverage
+        const cov = META.coverage || {};
+        const WARN = /לא נגיש|תחזוקה|CAPTCHA|לא ניתן/i;
+        let nWarn = 0;
+        $("coverage-list").innerHTML = countries.map((c) => {
+          const t = cov[c] || "ל.י", w = !cov[c] || WARN.test(t); if (w) nWarn++;
+          return `<article class="x-cov${w ? " is-warn" : ""}"><div class="x-cov__top"><i class="x-sdot" aria-hidden="true"></i><span class="x-flag" aria-hidden="true">${flag(c)}</span><h3>${esc(c)}</h3><span class="x-npill">${countOf(c)} פתוחים</span></div>` +
+            `<p class="x-cov__state">${w ? "כיסוי חלקי או מוגבל" : "כיסוי מלא"}</p><p class="x-cov__text">${esc(t)}</p></article>`;
+        }).join("");
+        $("cov-ok").textContent = countries.length - nWarn; $("cov-warn").textContent = nWarn;
+        const fbar = $("filters");
+        const setFh = () => document.documentElement.style.setProperty("--x-fh", fbar.offsetHeight + "px");
+        setFh(); if (window.ResizeObserver) new ResizeObserver(setFh).observe(fbar);
+        const closed = META.closed_this_scan || [];
+        $("closed-list").innerHTML = closed.length ? closed.map((s) => `<li>${esc(s)}</li>`).join("") : "<li>אין</li>";
+
+        // Export
+        const msg = $("export-msg");
+        const stamp = () => String(META.last_scan || "").replace(/\./g, "-") || "data";
+        function download(bytes, name) {
+          const blob = new Blob([bytes], { type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" });
+          const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = name;
+          document.body.appendChild(a); a.click(); a.remove();
+          setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+        }
+        // Web version (claude.ai page): downloads are blocked there, so the buttons copy rows for pasting into Excel.
+        const WEB = !!window.WEB_EXPORT_AS_COPY;
+        const tsv = (list) => [COLS.join("\t")].concat(list.map((r) => COLS.map((c) => String(r[c] == null ? "" : r[c]).replace(/[\t\r\n]+/g, " ")).join("\t"))).join("\r\n");
+        if (WEB) {
+          $("export-all").lastChild.textContent = "העתקה לאקסל (כל המכרזים הפתוחים)";
+          $("export-filtered").lastChild.textContent = "העתקה לאקסל (לפי הסינון)";
+        }
+        function copyRows(list) {
+          copyText(tsv(list));
+          msg.textContent = `הועתקו ${list.length} מכרזים. פתחו גיליון חדש באקסל והדביקו (Ctrl+V)`;
+        }
+        $("export-all").addEventListener("click", () => {
+          if (WEB) { copyRows(ROWS); return; }
+          try {
+            let bytes;
+            if (XLSX_B64) { const bin = atob(XLSX_B64); bytes = new Uint8Array(bin.length); for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i); }
+            else bytes = buildXlsx(ROWS);
+            download(bytes, `defense-tenders-apac-${stamp()}.xlsx`);
+            msg.textContent = `הקובץ הורד: ${ROWS.length} מכרזים פתוחים`;
+          } catch (err) { msg.textContent = "הייצוא נכשל, נסו שוב"; }
+        });
+        $("export-filtered").addEventListener("click", () => {
+          const list = filtered();
+          if (!list.length) { msg.textContent = "אין מכרזים לייצוא לפי הסינון הנוכחי"; return; }
+          if (WEB) { copyRows(list); return; }
+          try { download(buildXlsx(list), `defense-tenders-apac-filtered-${stamp()}.xlsx`); msg.textContent = `הקובץ הורד: ${list.length} מכרזים לפי הסינון`; }
+          catch (err) { msg.textContent = "הייצוא נכשל, נסו שוב"; }
+        });
+
+        // Minimal XLSX writer (stored zip, inline strings)
+        const enc = new TextEncoder();
+        const xml = (s) => String(s == null ? "" : s).replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g, "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+        function colName(i) { let s = ""; i++; while (i) { const m = (i - 1) % 26; s = String.fromCharCode(65 + m) + s; i = Math.floor((i - 1) / 26); } return s; }
+        function buildXlsx(list) {
+          const cell = (v, ri, ci, st) => `<c r="${colName(ci)}${ri}" t="inlineStr"${st ? ' s="1"' : ""}><is><t xml:space="preserve">${xml(v)}</t></is></c>`;
+          let rows = `<row r="1">${COLS.map((c, i) => cell(c, 1, i, true)).join("")}</row>`;
+          list.forEach((r, k) => { rows += `<row r="${k + 2}">${COLS.map((c, i) => cell(r[c], k + 2, i)).join("")}</row>`; });
+          const cols = COLS.map((c, i) => `<col min="${i + 1}" max="${i + 1}" width="${[3, 11, 12, 13].includes(i) ? 50 : 20}" customWidth="1"/>`).join("");
+          const files = {
+            "[Content_Types].xml": `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/><Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/></Types>`,
+            "_rels/.rels": `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>`,
+            "xl/workbook.xml": `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets><sheet name="Tenders" sheetId="1" r:id="rId1"/></sheets></workbook>`,
+            "xl/_rels/workbook.xml.rels": `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/><Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/></Relationships>`,
+            "xl/styles.xml": `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><fonts count="2"><font><sz val="11"/><name val="Arial"/></font><font><b/><sz val="11"/><name val="Arial"/></font></fonts><fills count="2"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill></fills><borders count="1"><border/></borders><cellStyleXfs count="1"><xf/></cellStyleXfs><cellXfs count="2"><xf fontId="0" applyAlignment="1"><alignment vertical="top" wrapText="1"/></xf><xf fontId="1" applyFont="1"/></cellXfs></styleSheet>`,
+            "xl/worksheets/sheet1.xml": `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><sheetViews><sheetView rightToLeft="1" workbookViewId="0"><pane ySplit="1" topLeftCell="A2" activePane="bottomLeft" state="frozen"/></sheetView></sheetViews><cols>${cols}</cols><sheetData>${rows}</sheetData><autoFilter ref="A1:${colName(COLS.length - 1)}${list.length + 1}"/></worksheet>`
+          };
+          return zip(files);
+        }
+        const CRC = (() => { const t = new Uint32Array(256); for (let n = 0; n < 256; n++) { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xedb88320 ^ (c >>> 1) : c >>> 1; t[n] = c >>> 0; } return t; })();
+        const crc32 = (b) => { let c = 0xffffffff; for (let i = 0; i < b.length; i++) c = CRC[(c ^ b[i]) & 0xff] ^ (c >>> 8); return (c ^ 0xffffffff) >>> 0; };
+        function zip(files) {
+          const parts = [], central = []; let offset = 0;
+          Object.keys(files).forEach((name) => {
+            const nb = enc.encode(name), data = enc.encode(files[name]), crc = crc32(data);
+            const h = new DataView(new ArrayBuffer(30));
+            h.setUint32(0, 0x04034b50, true); h.setUint16(4, 20, true); h.setUint16(6, 0x0800, true); h.setUint16(8, 0, true);
+            h.setUint16(10, 0, true); h.setUint16(12, 0x21, true); h.setUint32(14, crc, true);
+            h.setUint32(18, data.length, true); h.setUint32(22, data.length, true); h.setUint16(26, nb.length, true); h.setUint16(28, 0, true);
+            parts.push(new Uint8Array(h.buffer), nb, data);
+            const c = new DataView(new ArrayBuffer(46));
+            c.setUint32(0, 0x02014b50, true); c.setUint16(4, 20, true); c.setUint16(6, 20, true); c.setUint16(8, 0x0800, true); c.setUint16(10, 0, true);
+            c.setUint16(12, 0, true); c.setUint16(14, 0x21, true); c.setUint32(16, crc, true); c.setUint32(20, data.length, true); c.setUint32(24, data.length, true);
+            c.setUint16(28, nb.length, true); c.setUint32(42, offset, true);
+            central.push(new Uint8Array(c.buffer), nb);
+            offset += 30 + nb.length + data.length;
+          });
+          const csize = central.reduce((s, p) => s + p.length, 0);
+          const e = new DataView(new ArrayBuffer(22)); const n = Object.keys(files).length;
+          e.setUint32(0, 0x06054b50, true); e.setUint16(8, n, true); e.setUint16(10, n, true); e.setUint32(12, csize, true); e.setUint32(16, offset, true);
+          const all = parts.concat(central, [new Uint8Array(e.buffer)]);
+          const out = new Uint8Array(all.reduce((s, p) => s + p.length, 0)); let o = 0; all.forEach((p) => { out.set(p, o); o += p.length; });
+          return out;
+        }
+
+        syncControls(); renderHead(); render();
+      })();
+    </script>
+  </body>
+</html>
